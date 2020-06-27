@@ -1,0 +1,77 @@
+.sidebar {
+  width: 300px;
+  min-height: 100vh;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  background-color: #d4d7d8;
+  color: rgba(51, 50, 50, 1);
+}
+
+.home a {
+  color: rgba(51, 50, 50, 1);
+}
+
+.sb-icon {
+  width: 100%;
+  height: 56px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 15px;
+}
+
+.home, .sb-apps, .sb-about, .sb-github {
+  padding: 15px;
+}
+
+.sb-about a, .sb-github a{
+  color: rgba(51, 50, 50, 1);
+}
+
+.sb-apps h3 {
+  color: rgba(51, 50, 50, 0.6);
+}
+
+.apps-list li {
+  list-style: none;
+  padding: 10px 0 10px 15px;
+}
+
+.apps-list li:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 175px) {
+  .sidebar {
+    min-width: 175px;
+  }
+}
+
+.moveSidebar-enter {
+  left: -300px;
+}
+
+.moveSidebar-enter-active {
+  left: 0;
+  transition: left 500ms;
+}
+
+.moveSidebar-exit {
+  left: 0;
+}
+
+.moveSidebar-exit-active {
+  left: -300px;
+  transition: left 500ms;
+}
+
+.sidebarArrow:hover {
+  cursor: pointer;
+}
