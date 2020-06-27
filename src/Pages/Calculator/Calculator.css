@@ -1,0 +1,125 @@
+.calc-container {
+  width: 100%;
+  min-height: calc(100vh - 56px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(125, 136, 146);
+}
+
+.calc-wrapper {
+  width: 400px;
+  height: 500px;
+  border: 3px solid rgb(53, 52, 52);
+}
+
+.calc-screen {
+  width: 100%;
+  height: 30%;
+  border-bottom: 1px solid rgb(53, 52, 52);
+}
+
+.calc-keyboard {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 70%;
+}
+
+.calc-expr {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-bottom: 2px solid rgba(53, 52, 52, 0.4);
+  background-color: #439299;
+  overflow: auto;
+}
+
+.calc-expr span {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.8em;
+  margin-left: 10px;
+}
+
+.calc-result {
+  display: flex;
+  width: 100%;
+  height: 50%;
+  background-color: #54b6bf;
+  overflow: auto;
+}
+
+.calc-result .screen-result {
+  width: 75%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 1.7em;
+  font-weight: bold;
+  overflow: auto;
+}
+
+.screen-result span {
+  text-align: center;
+  width: 100%;
+}
+
+.calc-result .key-delete {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(182, 182, 182);
+  color: white;
+  font-size: 1.6em;
+  font-weight: bold;
+}
+
+.calc-result .key-delete:hover {
+  background-color: rgba(53, 52, 52, 1);
+  cursor: pointer;
+}
+
+.calc-key {
+  width: 25%;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: aliceblue;
+  background-color: rgba(53, 52, 52, 0.8);
+  outline: 1px solid rgba(53, 52, 52, 0.5);
+}
+
+.calc-key:hover {
+  background-color: rgba(53, 52, 52, 1);
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  background-color: rgb(59, 58, 58);
+}
+
+@media (max-width: 420px) {
+  .calc-wrapper {
+    width: 95%;
+  }
+}

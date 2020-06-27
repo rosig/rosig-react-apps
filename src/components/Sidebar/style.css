@@ -38,6 +38,10 @@
   padding: 10px 0 10px 15px;
 }
 
+.apps-list li a {
+  color: rgba(51, 50, 50, 1);
+}
+
 .apps-list li:hover {
   cursor: pointer;
 }

@@ -28,10 +28,13 @@ const Sidebar = ({ showSidebar, setShowSidebar }) => {
         <div className="sb-apps">
           <h3>Apps</h3>
           <ul className="apps-list">
-            <li>Cubo Mágico</li>
-            <li>Jogo da Memória</li>
-            <li>Lerp - Rings</li>
-            <li>Calculadora</li>
+            <li><Link to="/calculator">Calculadora</Link></li>
+            <li><Link to="/hex-rgb">Hex-Rgb</Link></li>
+            <li><Link to="/journi">Journi</Link></li>
+            <li><Link to="/lerp-rings">Lerp-Rings</Link></li>
+            <li><Link to="/magic-cube">Cubo Mágico</Link></li>
+            <li><Link to="/memory-game">Jogo da Memória</Link></li>
+            <li><Link to="/todos">Todos</Link></li>
           </ul>
         </div>
         <div className="sb-about">

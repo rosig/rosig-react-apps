@@ -1,0 +1,95 @@
+.iconPlus-wrapper {
+  width: calc(100% - 270px);
+  padding-top: 10px;
+  position: absolute;
+  z-index: 2;
+}
+
+.addtodo-container .icon-plus:hover {
+  cursor: pointer;
+}
+
+.addtodo-form {
+  width: calc(100% - 270px);
+  height: calc(100% - 60px);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 4;
+  background-color: rgba(34, 33, 33, 0.9);
+}
+
+.add-todo-off {
+  display: none;
+}
+
+.button-wrapper {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.button-wrapper button {
+  width: 70px;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid yellow;
+  background-color: yellow;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 1.1em;
+}
+
+.button-wrapper button:hover {
+  cursor: pointer;
+}
+
+.addtodo-form form {
+  width: 70%;
+  left: 10%;
+  display: flex;
+  flex-direction: column;
+}
+
+.addtodo-form form input[type="text"] {
+  margin-bottom: 10px;
+  height: 40px;
+  text-align: center;
+  font-size: 1.2em;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+
+.addtodo-form form textarea {
+  margin-bottom: 10px;
+  height: 80px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  resize: none;
+  padding: 10px;
+  font-size: 1.2em;
+}
+
+.addtodo-form form input[type="submit"] {
+  height: 30px;
+  background-color: #e53935;
+  border-radius: 5px;
+  border: 1px solid red;
+  font-weight: bold;
+}
+
+.addtodo-form form input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .addtodo-form {
+    width: 100%;
+  }
+  .iconPlus-wrapper {
+    width: 100%;
+  }
+}

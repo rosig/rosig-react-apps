@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css?family=Odibee+Sans&display=swap");
+
+.hexRgb-container {
+  width: 100%;
+  min-height: calc(100vh - 56px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  font-family: "Odibee Sans", cursive;
+}
+
+.hexRgb-container h1 {
+  margin-bottom: 50px;
+  padding: 5px;
+}
+
+.hex-wrapper,
+.rgb-wrapper {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  margin: 20px 0 20px 0;
+}
+
+.hex-wrapper label,
+.rgb-wrapper label {
+  margin-right: 20px;
+  font-weight: bold;
+  font-size: 1.6em;
+  padding: 4px 5px;
+}
+
+.hexRgb-container input {
+  width: 100%;
+  border: 0px;
+  font-size: 1.5em;
+  font-family: "Odibee Sans", cursive;
+  outline: none;
+  padding: 5px 0 5px 0;
+  text-align: center;
+}
+
+.hexRgb-container h1,
+.hex-wrapper label,
+.rgb-wrapper label,
+.hexRgb-container input {
+  color: rgb(175, 163, 149);
+  background-color: black;
+  border: 1px solid grey;
+}
+
+@media (max-width: 340px) {
+  .hex-wrapper,
+  .rgb-wrapper {
+    width: 90%;
+  }
+}
