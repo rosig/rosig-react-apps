@@ -1,5 +1,5 @@
 import React from "react";
-import "./Journi.css";
+import "./style.css";
 
 import logo from "./journi_logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import "./MemoryGame.css";
+import "./style.css";
 
 //Data
 import cells_json from "./cells.json";

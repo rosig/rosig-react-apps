@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import React, { useRef, useMemo } from "react";
 import { useFrame, useThree } from "react-three-fiber";
-import "./MagicCube.css";
+import "./style.css";
 
 const _colors = [
   "#757575",

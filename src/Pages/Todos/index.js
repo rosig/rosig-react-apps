@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Todos.css";
+import "./style.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlusSquare } from "@fortawesome/free-solid-svg-icons";
 import { CSSTransition } from 'react-transition-group';

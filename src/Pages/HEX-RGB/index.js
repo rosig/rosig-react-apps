@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./HEX-RGB.css";
+import "./style.css";
 
 const HexRgb = () => {
   const [hexCode, setHexCode] = useState("");

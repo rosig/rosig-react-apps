@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css?family=Bangers&display=swap");
+
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 56px);
+  background-color: #1e1e22;
+}
+
+.letter-container {
+  text-align: center;
+}
+
+.letter-container p {
+  line-height: 6em;
+}
+
+.letter-container span {
+  font-family: "Bangers", cursive;
+  font-size: 6em;
+  animation-name: fade;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  color: white;
+}
+
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .letter-container p {
+    line-height: 5em;
+  }
+
+  .letter-container span {
+    font-size: 5em;
+  }
+}
+
+@media (max-width: 400px) {
+  .letter-container p {
+    line-height: 3.5em;
+  }
+
+  .letter-container span {
+    font-size: 3.5em;
+  }
+}

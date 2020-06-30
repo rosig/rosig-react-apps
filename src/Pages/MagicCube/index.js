@@ -1,5 +1,5 @@
 import React, { useRef, useCallback } from "react";
-import "./MagicCube.css";
+import "./style.css";
 
 import * as THREE from "three";
 import { Canvas } from "react-three-fiber";

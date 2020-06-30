@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./index.css";
+import "./style.css";
 
 import { Canvas } from "react-three-fiber";
 import * as THREE from "three";
