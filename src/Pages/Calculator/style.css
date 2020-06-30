@@ -1,6 +1,6 @@
 .calculator {
   width: 100%;
-  min-width: 410px;
+  min-width: 420px;
   min-height: calc(100vh - 56px);
   display: flex;
   justify-content: center;

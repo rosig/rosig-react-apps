@@ -1,6 +1,6 @@
 .todos-container {
   width: 100%;
-  min-width: 460px;
+  min-width: 300px;
   min-height: calc(100vh - 56px);
   display: flex;
   flex-direction: column;
@@ -21,6 +21,7 @@
   width: 80%;
   height: 100%;
   padding-left: 10px;
+  margin-right: 5px;
 }
 
 .add-todo-container button {
@@ -132,5 +133,15 @@
 
   .ul-todo {
     width: 90%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .add-todo-container {
+    width: 95%;
+  }
+
+  .ul-todo {
+    width: 95%;
   }
 }
