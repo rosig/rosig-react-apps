@@ -13,30 +13,34 @@ const LerpRings = () => {
   const [mouse, setMouse] = useState({ x: 0, y: 0 });
 
   const handleClick = (e) => {
-    if (window.innerWidth > 800) {
-      setMouse({
-        x: ((e.clientX - 270) / (window.innerWidth - 270)) * 2 - 1,
-        y: -((e.clientY - 59.44) / (window.innerHeight - 59.44)) * 2 + 1,
-      });
-    } else {
-      setMouse({
-        x: (e.clientX / window.innerWidth) * 2 - 1,
-        y: -((e.clientY - 59.44) / (window.innerHeight - 59.44)) * 2 + 1,
-      });
-    }
+    setMouse({
+      x: (e.clientX / window.innerWidth) * 2 - 1,
+      y: -((e.clientY - 56) / (window.innerHeight - 56)) * 2 + 1
+    });
+    // if (window.innerWidth > 800) {
+    //   setMouse({
+    //     x: ((e.clientX - 270) / (window.innerWidth - 270)) * 2 - 1,
+    //     y: -((e.clientY - 59.44) / (window.innerHeight - 59.44)) * 2 + 1,
+    //   });
+    // } else {
+    //   setMouse({
+    //     x: (e.clientX / window.innerWidth) * 2 - 1,
+    //     y: -((e.clientY - 59.44) / (window.innerHeight - 59.44)) * 2 + 1,
+    //   });
+    // }
   };
 
-  useEffect(() => {
-    document.body.style.cursor =
-      "url('https://raw.githubusercontent.com/chenglou/react-motion/master/demos/demo8-draggable-list/cursor.png') 39 39, auto";
-  }, []);
+  // useEffect(() => {
+  //   document.body.style.cursor =
+  //     "url('https://raw.githubusercontent.com/chenglou/react-motion/master/demos/demo8-draggable-list/cursor.png') 39 39, auto";
+  // }, []);
 
   return (
     <div className="lerp-rings-container">
       <Canvas
         camera={{ fov: 100, position: [0, 0, 3] }}
         onCreated={({ gl }) => {
-          gl.toneMapping = THREE.Uncharted2ToneMapping;
+          // gl.toneMapping = THREE.Uncharted2ToneMapping;
           gl.setClearColor(new THREE.Color("#424242"));
         }}
         onClick={(e) => handleClick(e)}

@@ -2,6 +2,7 @@
 
 .memory-game-container {
   width: 100%;
+  min-width: 330px;
   min-height: calc(100vh - 56px);
   display: flex;
   flex-direction: column;
@@ -17,13 +18,13 @@
 
 .memory-game-container h1 {
   font-family: 'Bungee', cursive;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .memory-game-container button {
   height: 40px;
   width: 120px;
-  margin-top: 30px;
+  margin-top: 20px;
   font-size: 1em;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;

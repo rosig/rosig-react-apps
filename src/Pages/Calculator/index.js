@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Calculator.css";
+import "./style.css";
 
 const Keys = props => {
   return props.keys.map(key => (
@@ -8,7 +8,6 @@ const Keys = props => {
       key={key}
       onClick={() => props.handleKeyClick(key)}
     >
-      {" "}
       {key}
     </div>
   ));
@@ -114,23 +113,12 @@ const Calculator = () => {
   };
 
   return (
-    <div className="calc-container">
-      <div className="calc-wrapper">
-        <div className="calc-screen">
-          <div className="calc-expr">
-            <span>{expr}</span>
-          </div>
-          <div className="calc-result">
-            <div className="screen-result">
-              {" "}
-              <span> {result} </span>
-            </div>
-            <div className="key-delete" onClick={() => handleKeyClick("<")}>
-              <span>{"<"}</span>
-            </div>
-          </div>
-        </div>
-        <div className="calc-keyboard">
+    <div className="calculator">
+      <div className="calculator-wrap">
+        <div className="calculator-screen">{expr}</div>
+        <div className="calculator-result">{result}</div>
+        <div className="calculator-delete" onClick={() => handleKeyClick("<")}>{"<"}</div>
+        <div className="calculator-keys">
           <Keys keys={keys} handleKeyClick={handleKeyClick} />
         </div>
       </div>

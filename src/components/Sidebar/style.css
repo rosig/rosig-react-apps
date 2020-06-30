@@ -44,6 +44,7 @@
 
 .apps-list li:hover {
   cursor: pointer;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 400px) {

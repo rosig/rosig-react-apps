@@ -4,6 +4,14 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { CSSTransition } from 'react-transition-group';
+import apps_data from "../../apps_data";
+
+const Links = ({ setShowSidebar }) => {
+  const links = apps_data.map(link => {
+    return <li key={link.path}><Link onClick={() => setShowSidebar(false)} to={link.path}>{link.name}</Link></li>;
+  });
+  return links;
+};
 
 const Sidebar = ({ showSidebar, setShowSidebar }) => {
   return (
@@ -22,24 +30,18 @@ const Sidebar = ({ showSidebar, setShowSidebar }) => {
         </div>
         <div className="home">
           <h3>
-            <Link to="/">Home</Link>
+            <Link to="/" onClick={() => setShowSidebar(false)}>Home</Link>
           </h3>
         </div>
         <div className="sb-apps">
           <h3>Apps</h3>
           <ul className="apps-list">
-            <li><Link to="/calculator">Calculadora</Link></li>
-            <li><Link to="/hex-rgb">Hex-Rgb</Link></li>
-            <li><Link to="/journi">Journi</Link></li>
-            <li><Link to="/lerp-rings">Lerp-Rings</Link></li>
-            <li><Link to="/magic-cube">Cubo Mágico</Link></li>
-            <li><Link to="/memory-game">Jogo da Memória</Link></li>
-            <li><Link to="/todos">Todos</Link></li>
+            <Links setShowSidebar={setShowSidebar} />
           </ul>
         </div>
         <div className="sb-about">
           <h3>
-            <Link to="/about">About-me</Link>
+            <Link to="/about" onClick={() => setShowSidebar(false)}>About-me</Link>
           </h3>
         </div>
         <div className="sb-github">

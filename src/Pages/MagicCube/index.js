@@ -22,7 +22,7 @@ const MagicCube = () => {
         gl={{ antialias: false, alpha: false }}
         camera={{ position: [0, 0, 15], near: 5, far: 20 }}
         onCreated={({ gl }) => {
-          gl.toneMapping = THREE.Uncharted2ToneMapping;
+          // gl.toneMapping = THREE.Uncharted2ToneMapping;
           gl.setClearColor(new THREE.Color("#020207"));
         }}
         onMouseMove={onMouseMove}
@@ -34,7 +34,7 @@ const MagicCube = () => {
         <Effects />
       </Canvas>
     </div>
-  )
-}
+  );
+};
 
-export default MagicCube
+export default MagicCube;

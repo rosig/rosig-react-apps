@@ -1,6 +1,136 @@
 .todos-container {
   width: 100%;
+  min-width: 460px;
   min-height: calc(100vh - 56px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   overflow-y: auto;
   text-align: center;
+}
+
+.add-todo-container {
+  width: 50%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.add-todo-container input {
+  width: 80%;
+  height: 100%;
+  padding-left: 10px;
+}
+
+.add-todo-container button {
+  padding: 0 10px 0 10px;
+  height: 100%;
+  font-weight: bold;
+  background-color: rgb(189, 248, 101);
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.add-todo-container button:hover {
+  cursor: pointer;
+}
+
+.todos-icon-add {
+  margin: 20px 0 20px 0;
+}
+
+.todos-icon-add:hover {
+  cursor: pointer;
+}
+
+.ul-todo {
+  width: 70%;
+  position: relative;
+  margin: 20px 0 20px 0;
+  /* overflow: hidden; */
+}
+
+.ul-todo li {
+  height: 40px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid grey;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.ul-todo li p {
+  overflow: hidden;
+}
+
+.btn-delete-todo {
+  margin: 0 5px 0 5px;
+  padding: 5px;
+  border: 1px solid whitesmoke;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.btn-delete-todo {
+  background-color: orange;
+}
+
+.btn-delete-todo:hover {
+  cursor: pointer;
+  background-color: yellow;
+}
+
+/* -------- AddTodo Container Transition -------- */
+
+.moveAddTodo-enter {
+  top: -150px;
+}
+
+.moveAddTodo-enter-active {
+  top: 0;
+  transition: top 500ms;
+}
+
+.moveAddTodo-exit {
+  top: 0;
+}
+
+.moveAddTodo-exit-active {
+  top: -140px;
+  transition: top 500ms;
+}
+
+/* -------- TodoList Transition -------- */
+
+.moveTodoList-enter {
+  top: -50px;
+}
+
+.moveTodoList-enter-active {
+  top: 0;
+  transition: top 500ms;
+}
+
+.moveTodoList-exit {
+  top: 0;
+}
+
+.moveTodoList-exit-active {
+  top: -50px;
+  transition: top 500ms;
+}
+
+@media screen and (max-width: 900px) {
+  .add-todo-container {
+    width: 90%;
+  }
+
+  .ul-todo {
+    width: 90%;
+  }
 }

@@ -2,6 +2,7 @@
 
 .hexRgb-container {
   width: 100%;
+  min-width: 300px;
   min-height: calc(100vh - 56px);
   display: flex;
   flex-direction: column;
@@ -9,11 +10,13 @@
   align-items: center;
   background-color: black;
   font-family: "Odibee Sans", cursive;
+  overflow: auto;
 }
 
 .hexRgb-container h1 {
   margin-bottom: 50px;
   padding: 5px;
+  text-align: center;
 }
 
 .hex-wrapper,
