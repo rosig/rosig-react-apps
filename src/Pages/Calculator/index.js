@@ -1,12 +1,19 @@
 import React, { useState } from "react";
 import "./style.css";
 
-const Keys = props => {
-  return props.keys.map(key => (
+const Keys = ({ keys, handleKeyClick }) => {
+  function getClass(op) {
+    if (op === "+" || op === "-" || op === "*" || op === "/")
+      return "calc-key operation";
+    else if (op === "=") return "calc-key key-equal";
+    else return "calc-key";
+  }
+
+  return keys.map((key) => (
     <div
-      className="calc-key"
+      className={getClass(key)}
       key={key}
-      onClick={() => props.handleKeyClick(key)}
+      onClick={() => handleKeyClick(key)}
     >
       {key}
     </div>
@@ -16,12 +23,12 @@ const Keys = props => {
 const Calculator = () => {
   const numbers = [9, 8, 7, 6, 5, 4, 3, 2, 1, 0];
   const operations = ["+", "-", "*", "/"];
-  const keys = [9, 8, 7, "/", 6, 5, 4, "*", 3, 2, 1, "+", 0, "C", "=", "-"];
+  const keys = [7, 8, 9, "/", 4, 5, 6, "*", 1, 2, 3, "-", 0, "C", "=", "+"];
 
   const [expr, setExpr] = useState("");
   const [result, setResult] = useState("");
 
-  const check_operator = expr => {
+  const check_operator = (expr) => {
     const expr_len = expr.length;
 
     for (let op of operations) {
@@ -38,7 +45,7 @@ const Calculator = () => {
             return {
               op: op,
               pos: pos,
-              len: expr.length
+              len: expr.length,
             };
           }
         }
@@ -46,7 +53,7 @@ const Calculator = () => {
     }
   };
 
-  const handle_expr = expr => {
+  const handle_expr = (expr) => {
     if (isNaN(expr)) {
       const res = check_operator(expr);
       const subExpr_left = expr.substring(0, res.pos);
@@ -98,13 +105,13 @@ const Calculator = () => {
         const res = handle_expr(expr);
         setResult(res);
       }
-    }
+    },
   };
 
-  const handleKeyClick = key => {
+  const handleKeyClick = (key) => {
     if (numbers.indexOf(key) !== -1) actions.addNumber(key);
     else if (key === "C") actions.clear();
-    else if (key === "<") actions.deleteKey();
+    else if (key === "del") actions.deleteKey();
     else if (key === "*") actions.addMulDivSum(key);
     else if (key === "/") actions.addMulDivSum(key);
     else if (key === "+") actions.addMulDivSum(key);
@@ -117,7 +124,12 @@ const Calculator = () => {
       <div className="calculator-wrap">
         <div className="calculator-screen">{expr}</div>
         <div className="calculator-result">{result}</div>
-        <div className="calculator-delete" onClick={() => handleKeyClick("<")}>{"<"}</div>
+        <div
+          className="calculator-delete"
+          onClick={() => handleKeyClick("del")}
+        >
+          {"del"}
+        </div>
         <div className="calculator-keys">
           <Keys keys={keys} handleKeyClick={handleKeyClick} />
         </div>

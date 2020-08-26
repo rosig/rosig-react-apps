@@ -1,31 +1,31 @@
 const apps_data = [
   {
     path: "/calculator",
-    name: "Calculator"
+    name: "Calculator",
   },
   {
     path: "/hex-rgb",
-    name: "Hex-Rgb"
+    name: "Hex-Rgb",
   },
   {
     path: "/journi",
-    name: "Journi"
+    name: "Journi",
   },
   {
     path: "/lerp-rings",
-    name: "Lerp-Rings"
+    name: "Lerp-Rings",
   },
-  {
-    path: "/magic-cube",
-    name: "Cubo Mágico"
-  },
+  // {
+  //   path: "/magic-cube",
+  //   name: "Cubo Mágico"
+  // },
   {
     path: "/memory-game",
-    name: "Jogo da Memória"
+    name: "Jogo da Memória",
   },
   {
     path: "/todos",
-    name: "Todos"
+    name: "Todos",
   },
 ];
 

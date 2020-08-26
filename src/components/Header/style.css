@@ -14,11 +14,11 @@
 .header-icon,
 .header-git,
 .header-logo {
-  padding: 15px;
+  padding: 5px 15px;
 }
 
-.header-icon:hover, 
-.header-git:hover, 
+.header-icon:hover,
+.header-git:hover,
 .header-logo:hover {
   cursor: pointer;
 }
