@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,200&display=swap");
+
 .calculator {
   width: 100%;
   min-width: 420px;
@@ -17,15 +19,22 @@
   margin: 20px 0;
 }
 
+.calculator-screen,
+.calculator-result {
+  font-family: "Roboto Mono", monospace;
+}
+
 .calculator-screen {
   grid-column: 1 / 5;
   background-color: #ffffff;
   overflow: auto;
+  font-size: 2em;
 }
 
 .calculator-result {
   grid-column: 1 / 4;
   background-color: #ffffff;
+  font-size: 1.2em;
 }
 
 .calculator-delete {
