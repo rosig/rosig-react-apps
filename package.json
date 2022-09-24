@@ -15,10 +15,10 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1",
+    "react-scripts": "^5.0.1",
     "react-three-fiber": "^4.2.12",
     "react-transition-group": "^4.4.1",
-    "three": "^0.118.1"
+    "three": "^0.144.0"
   },
   "scripts": {
     "start": "react-scripts start",
